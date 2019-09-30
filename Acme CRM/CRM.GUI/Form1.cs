@@ -19,6 +19,7 @@ namespace CRM.GUI
             InitializeComponent();
 
             button1.Text = "Spara kund";
+            button2.Text = "Visa kunder";
 
         }
 
@@ -33,10 +34,19 @@ namespace CRM.GUI
 
             //visa för användaren att kunden är sparad
 
-            textBox1.Text = "";
+            textBox1.Text = string.Empty;
             textBox2.Text = string.Empty; //detta tar ingen plats och är en logisk representation av tom sträng
 
+            textBox1.Focus();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //skriv ut alla kunder som ligger i repository
+            foreach (Customer c in MyCustomers)
+            {
+                listBox1.Items.Add(c); //vad kommer vi få se utskrivet?
+            }
         }
     }
 }
