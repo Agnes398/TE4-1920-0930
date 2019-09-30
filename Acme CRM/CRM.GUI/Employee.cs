@@ -9,5 +9,6 @@ namespace CRM.GUI
     class Employee : Person
     {
         public int Id { get; set; }
+        public string Type { get; set; }
     }
 }
